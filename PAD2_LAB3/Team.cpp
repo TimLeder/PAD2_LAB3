@@ -1,55 +1,69 @@
 #include "Team.h"
 
-std::string Team::getTeamName()
+Team::Team(const std::string& nameIn, int a, int b, int c, int d, int e) : matchesPlayed(a), gamesWon(b), gamesLost(c), pointsWon(d), pointsLost(e)
 {
-	return std::string();
+	setTeamName(nameIn);
 }
 
-void Team::setTeamName(std::string)
+std::string Team::getTeamName()
 {
+	return teamname;
+}
+
+void Team::setTeamName(const std::string& input)
+{
+	size_t length = input.size();
+	length = (length < 16 ? length : 15);
+	input.copy(teamname, length);
+	teamname[length] = '\0';
 }
 
 int Team::getMatchesPlayed()
 {
-	return 0;
+	return matchesPlayed;
 }
 
-void Team::setMatchesPlayed(int)
+void Team::setMatchesPlayed(int in)
 {
+	matchesPlayed = in;
 }
 
 int Team::getGamesWon()
 {
-	return 0;
+	return gamesWon;
 }
 
-void Team::setGamesWon(int)
+void Team::setGamesWon(int in)
 {
+	gamesWon = in;
 }
 
 int Team::getGamesLost()
 {
-	return 0;
+	return gamesLost;
 }
 
-void Team::setGamesLost(int)
+void Team::setGamesLost(int in)
 {
+	gamesLost = in;
 }
 
 int Team::getPointsWon()
 {
-	return 0;
+	return pointsWon;
 }
 
-void Team::setPointsWon(int)
+void Team::setPointsWon(int in)
 {
+	pointsWon = in;
 }
 
 int Team::getPointsLost()
 {
-	return 0;
+	return pointsLost;
 }
 
-void Team::setPointsLost(int)
+void Team::setPointsLost(int in)
 {
+	pointsLost = in;
 }
