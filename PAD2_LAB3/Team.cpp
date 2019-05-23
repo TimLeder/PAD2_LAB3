@@ -67,3 +67,20 @@ void Team::setPointsLost(int in)
 {
 	pointsLost = in;
 }
+
+string Team::makeString()
+{
+	stringstream out;
+	out << left << setw(22) << getTeamName()
+		<< setw(8) << getMatchesPlayed()
+		<< setw(3) << getGamesWon() << ":" << setw(8) << getGamesLost()
+		<< setw(3) << getPointsWon() << ":" << getPointsLost() << endl;
+	return out.str();
+}
+
+bool Team::operator<(const Team& e)const
+{
+	return pointsWon < e.pointsWon
+		|| (pointsWon == e.pointsWon && pointsLost > e.pointsLost)
+		|| (pointsWon == e.pointsWon && pointsLost == e.pointsLost && gamesWon - gamesLost < e.gamesWon - e.gamesLost);
+}

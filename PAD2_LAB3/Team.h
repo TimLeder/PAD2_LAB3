@@ -1,5 +1,11 @@
 #pragma once
 #include <string>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <cstdlib>
+#include <sstream>
+using namespace std;
 
 class Team
 {
@@ -23,6 +29,10 @@ public:
 
 	int getPointsLost();
 	void setPointsLost(int);
+
+	string makeString();
+
+	bool operator<(const Team& e)const;
 
 private:
 	char teamname[20];
