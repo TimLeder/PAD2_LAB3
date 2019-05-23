@@ -29,6 +29,20 @@ string Table::makeString()
 	return out.str();
 }
 
+void Table::makeOut()
+{
+	ofstream outFile("outfile.txt", ios::out);
+
+	if (!outFile) {
+		cerr << "Error: Could not open/create outfile." << endl;
+		exit(EXIT_FAILURE);
+	}
+
+	outFile << makeString();
+	outFile.close();
+	cout << endl << "Created an outfile.txt in your project directory." << endl;
+}
+
 
 void Table::sortVector()
 {

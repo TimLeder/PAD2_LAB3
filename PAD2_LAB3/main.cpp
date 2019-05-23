@@ -10,4 +10,5 @@ int main()
 	cout << test.makeString();
 	test.sortVector();
 	cout << endl << test.makeString();
+	test.makeOut();
 }

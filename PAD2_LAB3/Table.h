@@ -9,8 +9,8 @@ class Table
 public:
 	void readToVector();
 	string makeString();
+	void makeOut();
 	void sortVector();
-	std::vector<Team> teamVector;
 private:
-
+	std::vector<Team> teamVector;
 };
