@@ -1,2 +1,2 @@
 # PAD2_LAB3
-Input and output of data stored in binary files
+Using stdlib to read, manipulate and write data to binary files
