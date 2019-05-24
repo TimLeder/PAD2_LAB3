@@ -46,5 +46,5 @@ void Table::makeOut()
 
 void Table::sortVector()
 {
-	std::sort(teamVector.begin(), teamVector.end());
+	std::sort(teamVector.rbegin(), teamVector.rend());
 }
